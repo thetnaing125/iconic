@@ -25,7 +25,7 @@
     <meta property="twitter:description" content="Tailwindcss Final Project">
     <meta property="twitter:image" content="./img/thunmail.png">
     <link rel="stylesheet" href="./build.css">
-    <link rel="stylesheet" href="./style.css">
+
    
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -35,9 +35,8 @@
   
 
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css"
-        integrity="sha512-okkLcBJE+U19Dpd0QdHA1wn4YY6rW3CwaxeLJT3Jmj9ZcNSbln/VYw8UdqXRIwLX7J8PmtHs0I/FPAhozFvXKg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.0.5/swiper-bundle.min.css" integrity="sha512-c7DAOY7+p/nDx48NXfO5QvQa2BLeGfNNdA+aVfRZImD3pukw/P/a4c52QPyG2LRkjtxRiCNg+lzsvljFiVZ4cQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Parisienne&family=Playfair+Display&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&family=Silkscreen:wght@400;700&display=swap"
@@ -51,6 +50,133 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+
+/* ============================================================Style.CSS============================ */
+.activeIcon {
+        color: white;
+        background-color: #1f1f1f;
+    }
+    
+    .activeButton {
+        background: white;
+        color: black;
+    }
+    
+    .languageIconActive {
+        background: rgb(51 65 85);
+        --tw-text-opacity: 1;
+        color: white;
+    }
+    
+    .activeCode {
+        display: block;
+    }
+    
+    .toggle-checkbox:checked {
+        right: 0;
+        border: none;
+        background-color: white;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' className='h-10 w-10' fill='%23FFF' viewBox='0 0 24 24' stroke='black' > <path strokeLinecap='round' strokeLinejoin='round' d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z' /> </svg>");
+    }
+    
+    .toggle-checkbox:checked+.toggle-label {
+        background-color: black;
+    }
+    
+    .swiper {
+        width: 100%;
+        height: 400px;
+    }
+/* -------------------------------------Automatice------------------------ */
+
+.thetdevice{
+    font-size:40px;
+}
+
+.thetdevice{
+  width:500px;
+  height:500px;
+  color:red;
+  animation: myanimation 1s infinite;
+}
+@keyframes myanimation {
+  0% {background-color: red;}
+  25%{background-color:yellow;}
+  50%{background-color:green;}
+  75%{background-color:brown;}
+  100% {background-color: red;}
+}
+  
+/*================== Loading=============== */
+.loading{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    z-index: 55;
+}
+
+.loader {
+    position: relative;
+    width: 75px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#ffff00 50px, transparent 0),
+                      linear-gradient(#009900 50px, transparent 0),
+                      linear-gradient(#ff0000 50px, transparent 0),
+                      linear-gradient(#6600ff 50px, transparent 0),
+                      linear-gradient(#00ffff 50px, transparent 0);
+    background-size: 8px 100%;
+    background-position: 0px 90px, 15px 78px, 30px 66px, 45px 58px, 60px 50px;
+    animation: pillerPushUp 4s linear infinite;
+  }
+  .loader:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: blue;
+    border-radius: 50%;
+    animation: ballStepUp 4s linear infinite;
+  }
+
+@keyframes pillerPushUp {
+  0% , 40% , 100%{background-position: 0px 90px, 15px 78px, 30px 66px, 45px 58px, 60px 50px}
+  50% ,  90% {background-position: 0px 50px, 15px 58px, 30px 66px, 45px 78px, 60px 90px}
+}
+
+@keyframes ballStepUp {
+  0% {transform: translate(0, 0)}
+  5% {transform: translate(8px, -14px)}
+  10% {transform: translate(15px, -10px)}
+  17% {transform: translate(23px, -24px)}
+  20% {transform: translate(30px, -20px)}
+  27% {transform: translate(38px, -34px)}
+  30% {transform: translate(45px, -30px)}
+  37% {transform: translate(53px, -44px)}
+  40% {transform: translate(60px, -40px)}
+  50% {transform: translate(60px, 0)}
+  57% {transform: translate(53px, -14px)}
+  60% {transform: translate(45px, -10px)}
+  67% {transform: translate(37px, -24px)}
+  70% {transform: translate(30px, -20px)}
+  77% {transform: translate(22px, -34px)}
+  80% {transform: translate(15px, -30px)}
+  87% {transform: translate(7px, -44px)}
+  90% {transform: translate(0, -40px)}
+  100% {transform: translate(0, 0);}
+}
+    
+
+
+
     </style>
 
 </head>
@@ -1227,7 +1353,7 @@
 
         <div class="border rounded-2xl p-5 mb-5 hover:shadow-2xl cursor-pointer">
             <div class="border rounded-2xl p-5 mb-5">
-                <div class="flex items-center space-x-5">
+                <div class="md:flex items-center space-x-5">
                     <img class="w-52 rounded-xl hover:rotate-45 duration-1000 lanlanlay" src="/img/star-img.png" alt="">
                     <div class="">
                         <span class="text-xl font-bold text-slate-500 lanlanlay">BLOG</span>
@@ -1238,7 +1364,7 @@
             </div>
 
             <div class="border rounded-2xl p-5">
-                <div class="flex items-center space-x-5">
+                <div class="md:flex items-center space-x-5">
                     <img class="w-52 rounded-xl hover:rotate-45 duration-1000 lanlanlay" src="/img/sound-wave.png" alt="">
                     <div class="">
                         <span class="text-xl font-bold text-slate-500 lanlanlay">EVENTS</span>
@@ -1296,15 +1422,15 @@
 <section class="mb-96">
 <div class="px-3 md:px-5 lg:px-20 flex flex-col lg:flex-row mt-44 mb-72 md:mt-80 relative ">
     <!-- One -->
-    <div class="space-y-10 ">
-        <h6 class="text-xl text-slate-400 font-medium fromBottom lanlanlay">CROSS-PLATFORM SDK</h6>
-        <h1 class="text-5xl font-semibold max-w-md fromBottom lanlanlay">A modern, open source SDK for iOS and Android apps.
+    <div class="space-y-10 lanlanlay">
+        <h6 class="text-xl text-slate-400 font-medium fromBottom">CROSS-PLATFORM SDK</h6>
+        <h1 class="text-5xl font-semibold max-w-md fromBottom">A modern, open source SDK for iOS and Android apps.
         </h1>
-        <p class="text-xl text-slate-600 max-w-md fromBottom lanlanlay">Building high quality mobile apps is no easy task. Users expect seamless, familiar, and accessible interfaces—and developers want to build quickly.
+        <p class="text-xl text-slate-600 max-w-md fromBottom">Building high quality mobile apps is no easy task. Users expect seamless, familiar, and accessible interfaces—and developers want to build quickly.
         </p>
-        <p class="text-xl text-slate-600 max-w-md fromBottom lanlanlay">Ionic offers seamless app UX, across iOS, Android, and the Web from a single codebase.</p>
+        <p class="text-xl text-slate-600 max-w-md fromBottom">Ionic offers seamless app UX, across iOS, Android, and the Web from a single codebase.</p>
         <div class="flex flex-col md:flex-row md:space-x-10 fromBottom ">
-            <div class="flex space-x-6 lg:space-x-8 activeIconContainer lanlanlay">
+            <div class="flex space-x-6 lg:space-x-8 activeIconContainer">
                 <div class="space-y-3 w-20 cursor-pointer " onclick="imgChangeOne('/img/phone-img-w-2.webp', '/img/phone-img-w-1.webp','/img/phone-img-b-2.webp','/img/phone-img-b-1.webp') ">
                     <div class="py-4 px-3 bg-yellow-300 text-slate-500 rounded-3xl w-16 h-16 flex justify-center mx-auto activeIcon icons ">
                         <i class="fa-brands fa-apple text-3xl "></i>
@@ -1340,7 +1466,7 @@
         </div>
     </div>
     <!-- Two -->
-    <div class="relative lg:absolute lg:right-0 mt-44 lg:mt-0 scaleUp lanlanlay">
+    <div class="relative lg:absolute lg:right-0 mt-44 lg:mt-0 scaleUp">
         <div class=" " id="whiteImg">
             <img src="/img/phone-img-w-2.webp" alt=" " class="absolute -top-20 right-32 md:-top-20 md:right-72 z-10 w-56 md:w-96 imgOne ">
             <img src="/img/phone-img-w-1.webp" alt=" " class="absolute right-10 md:right-20 lg:relative w-56 md:w-96 imgTwo ">
@@ -1392,11 +1518,11 @@
         
         <div class="grid box-border gap-[2rem] grid-cols-1 md:grid-cols-3 relative ">
             <div class="md:col-span-2 pl-10 pt-10 pb-10 rounded-3xl overflow-hidden bg-gradient-to-r from-pink-400 via-purple-500 to-blue-400 relative ">
-                <div class="flex relative justify-between lanlanlay">
+                <div class="flex relative justify-between">
                     <img src="/img/bg-logo.png" class="whitespace-nowrap bg-cover bg-no-repeat w-20 h-20 " alt=" ">
                     <img src="/img/ionic-io-homepage-cloud-2.png" class="whitespace-nowrap bg-contain bg-no-repeat h-72 opacity-20 md:opacity-100 " alt=" ">
                 </div>
-                <div class="absolute bottom-5 fromBottom lanlanlay">
+                <div class="absolute bottom-5 fromBottom">
                     <h5 class="font-semibold text-xs text-slate-200 ">IONIC APPFLOW</h5>
                     <h3 class="text-2xl font-medium text-white max-w-[390px] mt-2 leading-7 ">Fully managed cloud app delivery at the speed of development.</h3>
                     <h5 class="text-sm text-white text-md font-medium mt-2 ">Build,publish,and scale your apps with ease.
@@ -1504,18 +1630,18 @@
     <div class="px-3 md:px-5 lg:px-20 ">
         <div class="md:flex space-y-20 md:space-y-0 ">
             <!-- left -->
-            <div class="space-y-8 mt-14 ">
-                <h5 class="text-slate-300 font-medium lanlanlay">BUILT FOR DEVELOPERS</h5>
-                <h1 class="text-5xl font-medium text-white tracking-wider lanlanlay">A developer-first platform. Built on open source <span class="thetdevice">..</span> </h1>
+            <div class="space-y-8 mt-14 lanlanlay">
+                <h5 class="text-slate-300 font-medium">BUILT FOR DEVELOPERS</h5>
+                <h1 class="text-5xl font-medium text-white tracking-wider">A developer-first platform. Built on open source <span class="thetdevice">..</span> </h1>
                 <ul class="space-y-3 ">
-                    <li class="text-white space-x-2 text-md font-medium lanlanlay">
+                    <li class="text-white space-x-2 text-md font-medium">
                         <i class="fa-solid fa-check "></i>
                         <span>
                             World-class <a href="# "
                                 class="border-b-2 hover:border-white duration-300 border-slate-600">Documentation</a>
                         </span>
                     </li>
-                    <li class="text-white space-x-2 text-md font-medium lanlanlay">
+                    <li class="text-white space-x-2 text-md font-medium">
                         <i class="fa-solid fa-check "></i>
                         <span>
                             100% open source <a href="# "
@@ -1523,7 +1649,7 @@
                                 SDK</a>
                         </span>
                     </li>
-                    <li class="text-white space-x-2 text-md font-medium lanlanlay">
+                    <li class="text-white space-x-2 text-md font-medium">
                         <i class="fa-solid fa-check "></i>
                         <span>
                             A <a href="# "
@@ -1531,7 +1657,7 @@
                             building and testing
                         </span>
                     </li>
-                    <li class="text-white space-x-2 text-md font-medium lanlanlay">
+                    <li class="text-white space-x-2 text-md font-medium">
                         <i class="fa-solid fa-check "></i>
                         <span>
                             Cross-platform <a href="# "
@@ -1539,13 +1665,13 @@
                                 bridge</a>
                         </span>
                     </li>
-                    <li class="text-white space-x-2 text-md font-medium lanlanlay">
+                    <li class="text-white space-x-2 text-md font-medium">
                         <i class="fa-solid fa-check "></i>
                         <span>
                             Reat,Angular,& Vue integrations
                         </span>
                     </li>
-                    <li class="text-white space-x-2 text-md font-medium lanlanlay">
+                    <li class="text-white space-x-2 text-md font-medium">
                         <i class="fa-solid fa-check "></i>
                         <span>
                             World-wide developer <a href="# "
@@ -1553,7 +1679,7 @@
                         </span>
                     </li>
                 </ul>
-                <button class="bg-lime-400 text-slate-800 px-3 py-2 rounded-3xl font-semibold hover:bg-slate-200 duration-300 lanlanlay">
+                <button class="bg-lime-400 text-slate-800 px-3 py-2 rounded-3xl font-semibold hover:bg-slate-200 duration-300">
                     <span class="text-sm lg:text-md font-semibold ">Start building</span>
                     <i class="fa-solid fa-arrow-right text-[9px] "></i>
                 </button>
@@ -1573,28 +1699,28 @@
 
                 <div>
                     <!-- code -->
-                    <div class="bg-slate-900 p-10 rounded-2xl relative h-[550px] md:w-[350px] lg:w-[520px] activeContent scaleUp lanlanlay">
+                    <div class="bg-slate-900 p-10 rounded-2xl relative h-[550px] md:w-[350px] lg:w-[520px] activeContent scaleUp">
                         <ul class="flex space-x-3 ">
-                            <li class="px-5 py-2 space-y-3 text-slate-400 rounded-xl text-center cursor-pointer languageIcons languageIconActive w-28 lanlanlay" onclick="languageIconActive() ">
+                            <li class="px-5 py-2 space-y-3 text-slate-400 rounded-xl text-center cursor-pointer languageIcons languageIconActive w-28" onclick="languageIconActive() ">
                                 <i class="fa-brands fa-react "></i>
                                 <p>React</p>
                             </li>
-                            <li class="px-5 py-2 space-y-3 text-slate-400 rounded-xl text-center cursor-pointer languageIcons w-28 lanlanlay" onclick="languageIconActive() ">
+                            <li class="px-5 py-2 space-y-3 text-slate-400 rounded-xl text-center cursor-pointer languageIcons w-28" onclick="languageIconActive() ">
                                 <i class="fa-brands fa-angular "></i>
                                 <p>Angular</p>
                             </li>
-                            <li class="px-5 py-2 space-y-3 text-slate-400 rounded-xl text-center cursor-pointer languageIcons w-28 lanlanlay" onclick="languageIconActive() ">
+                            <li class="px-5 py-2 space-y-3 text-slate-400 rounded-xl text-center cursor-pointer languageIcons w-28" onclick="languageIconActive() ">
                                 <i class="fa-brands fa-vuejs "></i>
                                 <p>Vue</p>
                             </li>
-                            <li class="hidden lg:block px-5 py-2 space-y-3 text-slate-400 rounded-xl text-center cursor-pointer languageIcons w-28 lanlanlay" onclick="languageIconActive() ">
+                            <li class="hidden lg:block px-5 py-2 space-y-3 text-slate-400 rounded-xl text-center cursor-pointer languageIcons w-28" onclick="languageIconActive() ">
                                 <i class="fa-brands fa-js "></i>
                                 <p>JavaScript</p>
                             </li>
                         </ul>
                         
-                        <div class="mt-10 absolute languageContent hidden activeCode " id="react ">
-                            <div class="font-semibold lanlanlay">
+                        <div class="mt-10 absolute languageContent hidden activeCode" id="react ">
+                            <div class="font-semibold">
                                 <span class="mr-5 text-white ">1</span>
                                 <span class="text-blue-300 ">
                                     </span>
@@ -1605,7 +1731,7 @@
                                 <span class="text-blue-300 ">/</span>
                                 <span class="text-blue-300 ">h4></span>
                             </div>
-                            <div class="font-semibold lanlanlay">
+                            <div class="font-semibold">
                                 <span class="mr-5 text-white ">2</span>
                                 <span class="text-blue-300 ">
                                     </span>
@@ -1616,13 +1742,13 @@
                                 <span class="text-blue-300 ">/</span>
                                 <span class="text-blue-300 ">h4></span>
                             </div>
-                            <div class="font-semibold lanlanlay">
+                            <div class="font-semibold">
                                 <span class="mr-5 text-white ">3</span>
                                 <span class="text-blue-300 ">
                                     </span>
                                 <span class="text-blue-300 ">ion-list></span>
                             </div>
-                            <div class="font-semibold w-full lanlanlay">
+                            <div class="font-semibold w-full">
                                 <span class="mr-5 text-white ">4</span>
                                 <span class="text-blue-300 ml-2 ">
                                     </span>
@@ -1633,7 +1759,7 @@
                                 <span class="text-green-600 ml-10">Albums"</span>
                                 <span class="text-blue-300">></span>
                             </div>
-                            <div class="font-semibold w-full lanlanlay">
+                            <div class="font-semibold w-full">
                                 <span class="mr-5 text-white">5</span>
                                 <span class="text-blue-300 ml-6">
                                     </span>
@@ -1642,7 +1768,7 @@
                                 <span class="text-green-600 "> ="start"</span>
                                 <span class="text-blue-300">></span>
                             </div>
-                            <div class="font-semibold lanlanlay">
+                            <div class="font-semibold">
                                 <span class="mr-5 text-white">6</span>
                                 <span class="text-blue-300 ml-8">
                                     </span>
@@ -1663,13 +1789,13 @@
                                 <span class="text-blue-300">></span>
                             </div>
 
-                            <div class="font-semibold lanlanlay">
+                            <div class="font-semibold">
                                 <span class="mr-5 text-white">8</span>
                                 <span class="text-blue-300 ml-6">
                                     </span>
                                 <span class="text-blue-300">ion-lable></span>
                             </div>
-                            <div class="font-semibold lanlanlay">
+                            <div class="font-semibold">
                                 <span class="mr-5 text-white">9</span>
                                 <span class="text-blue-300 ml-9">
                                     </span>
@@ -1714,7 +1840,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-10 absolute hidden languageContent lanlanlay" id="angular">
+                        <div class="mt-10 absolute hidden languageContent" id="angular">
                             <div class="font-semibold ">
                                 <span class="mr-5 text-white">1</span>
                                 <span class="text-blue-300">
@@ -1956,7 +2082,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-10 absolute hidden languageContent lanlanlay" id="JavaScript">
+                        <div class="mt-10 absolute hidden languageContent" id="JavaScript">
                             <div class="font-semibold ">
                                 <span class="mr-5 text-white">1</span>
                                 <span class="text-blue-300">
@@ -2145,32 +2271,32 @@
             </div>
         </div>
         <div class="mt-16">
-            <h3 class="text-4xl font-semibold text-white lanlanlay">Developer resources</h3>
+            <h3 class="text-4xl font-semibold text-white">Developer resources</h3>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-10">
                 <div class="text-white py-5 pl-8 pr-10 bg-slate-700 rounded-3xl space-y-10 fromBottom">
                     <i class="fa-brands fa-discord text-3xl"></i>
-                    <div class=" text-white lanlanlay">
+                    <div class=" text-white">
                         <span class="text-2xl font-semibold">Ionic Discord</span>
                         <i class="fa-solid fa-arrow-right text-[15px]"></i>
                     </div>
                 </div>
                 <div class="text-white py-5 pl-8 pr-10 bg-slate-700 rounded-3xl space-y-10 fromBottom">
                     <img src="/img/forum.webp" alt="" class="w-9">
-                    <div class=" text-white lanlanlay">
+                    <div class=" text-white">
                         <span class="text-2xl font-semibold">Ionic Discord</span>
                         <i class="fa-solid fa-arrow-right text-[15px]"></i>
                     </div>
                 </div>
                 <div class="text-white py-5 pl-8 pr-10 bg-slate-700 rounded-3xl space-y-10 fromBottom">
                     <img src="/img/docs.webp" alt="" class="w-9">
-                    <div class=" text-white lanlanlay">
+                    <div class=" text-white">
                         <span class="text-2xl font-semibold">Ionic Discord</span>
                         <i class="fa-solid fa-arrow-right text-[15px]"></i>
                     </div>
                 </div>
                 <div class="text-white py-5 pl-8 pr-10 bg-slate-700 rounded-3xl space-y-10 fromBottom">
                     <i class="fa-brands fa-github text-3xl"></i>
-                    <div class=" text-white lanlanlay">
+                    <div class=" text-white">
                         <span class="text-2xl font-semibold">Ionic Discord</span>
                         <i class="fa-solid fa-arrow-right text-[15px]"></i>
                     </div>
@@ -2260,10 +2386,10 @@
 <section class="mb-20">
   <div class=" mt-40 relative ">
     <div class="text-center space-y-8 relative px-3 md:px-5 lg:px-20">
-        <h6 class="text-sm tracking-wider text-slate-400 font-semibold lanlanlay">
+        <h6 class="text-sm tracking-wider text-slate-400 font-semibold">
             1000’S OF CUSTOMERS
         </h6>
-        <h2 class="text-5xl font-semibold md:max-w-lg mx-auto lanlanlay">
+        <h2 class="text-5xl font-semibold md:max-w-lg mx-auto">
             Loved by developers. Trusted by enterprise.
         </h2>
     </div>
@@ -2400,27 +2526,27 @@
             </div>
         </div>
     </div>
-    <div thumbsSlider="" class=" mx-auto mt-16 ">
+    <div thumbsSlider="" class=" mx-auto mt-16 lanlanlay">
         <div class=" flex justify-center items-center space-x-10">
-            <div class="lanlanlay">
+            <div class="">
                 <img src="/img/logo-bobcat-dark.png" class="w-7 rounded-2xl"/>
             </div>
-            <div class="lanlanlay">
+            <div class="">
                 <img src="/img/logo-burger-king-dark.png" class="w-7 rounded-2xl"/>
             </div>
-            <div class="lanlanlay">
+            <div class="">
                 <img src="/img/logo-hr-block-dark.png" class="w-7 rounded-2xl"/>
             </div>
-            <div class="lanlanlay">
+            <div class="">
                 <img src="/img/logo-nhs-dark.png" class="w-7 rounded-2xl"/>
             </div>
-            <div class="lanlanlay">
+            <div class="">
                 <img src="/img/logo-southwest-dark.png" class="w-7 rounded-2xl"/>
             </div>
         </div>
     </div>
     <div class="mt-20 text-center">
-        <span class="text-md font-bold text-blue-700 lanlanlay lanlanlay">Meet our customers</span>
+        <span class="text-md font-bold text-blue-700 lanlanlay">Meet our customers</span>
         <i class="fa-solid fa-arrow-right text-xs text-blue-700"></i>
     </div>
   </div>
@@ -2453,45 +2579,45 @@
             </div>
             <div class="space-y-3 mb-10">
                 <h1 class="text-slate-700 font-bold text-xl lanlanlay">The Platform</h1>
-                <p class="text-sm text-slate-500 lanlanlay">Overview</p>
-                <p class="text-sm text-slate-500 lanlanlay">Build</p>
-                <p class="text-sm text-slate-500 lanlanlay">Secure</p>
-                <p class="text-sm text-slate-500 lanlanlay">Deliver</p>
-                <p class="text-sm text-slate-500 lanlanlay">Why Ionic?</p>
+                <p class="text-sm text-slate-500">Overview</p>
+                <p class="text-sm text-slate-500">Build</p>
+                <p class="text-sm text-slate-500">Secure</p>
+                <p class="text-sm text-slate-500">Deliver</p>
+                <p class="text-sm text-slate-500">Why Ionic?</p>
             </div>
             <div class="space-y-3 mb-10">
                 <h1 class="text-slate-700 font-bold text-xl lanlanlay">Products</h1>
-                <p class="text-sm text-slate-500 lanlanlay">Framework</p>
-                <p class="text-sm text-slate-500 lanlanlay">Capacitor</p>
-                <p class="text-sm text-slate-500 lanlanlay">Appflow</p>
-                <p class="text-sm text-slate-500 lanlanlay">Identity Vault</p>
-                <p class="text-sm text-slate-500 lanlanlay">Secure Storage</p>
-                <p class="text-sm text-slate-500 lanlanlay">Auth Connect</p>
+                <p class="text-sm text-slate-500">Framework</p>
+                <p class="text-sm text-slate-500">Capacitor</p>
+                <p class="text-sm text-slate-500">Appflow</p>
+                <p class="text-sm text-slate-500">Identity Vault</p>
+                <p class="text-sm text-slate-500">Secure Storage</p>
+                <p class="text-sm text-slate-500">Auth Connect</p>
             </div>
             <div class="space-y-3 mb-10">
                 <h1 class="text-slate-700 font-bold text-xl lanlanlay">Resources</h1>
-                <p class="text-sm text-slate-500 lanlanlay">Resource Center</p>
-                <p class="text-sm text-slate-500 lanlanlay">Blog</p>
-                <p class="text-sm text-slate-500 lanlanlay">Articles</p>
-                <p class="text-sm text-slate-500 lanlanlay">Webinars</p>
-                <p class="text-sm text-slate-500 lanlanlay">Case Studies</p>
-                <p class="text-sm text-slate-500 lanlanlay">Videos</p>
+                <p class="text-sm text-slate-500">Resource Center</p>
+                <p class="text-sm text-slate-500">Blog</p>
+                <p class="text-sm text-slate-500">Articles</p>
+                <p class="text-sm text-slate-500">Webinars</p>
+                <p class="text-sm text-slate-500">Case Studies</p>
+                <p class="text-sm text-slate-500">Videos</p>
             </div>
             <div class="space-y-3 mb-10">
                 <h1 class="text-slate-700 font-bold text-xl lanlanlay">Company</h1>
-                <p class="text-sm text-slate-500 lanlanlay">About us</p>
-                <p class="text-sm text-slate-500 lanlanlay">Customers</p>
-                <p class="text-sm text-slate-500 lanlanlay">Brand</p>
-                <p class="text-sm text-slate-500 lanlanlay">Contact</p>
-                <p class="text-sm text-slate-500 lanlanlay">Careers</p>
-                <p class="text-sm text-slate-500 lanlanlay">Privacy</p>
+                <p class="text-sm text-slate-500">About us</p>
+                <p class="text-sm text-slate-500">Customers</p>
+                <p class="text-sm text-slate-500">Brand</p>
+                <p class="text-sm text-slate-500">Contact</p>
+                <p class="text-sm text-slate-500">Careers</p>
+                <p class="text-sm text-slate-500">Privacy</p>
             </div>
             <div class="space-y-3 mb-10">
                 <h1 class="text-slate-700 font-bold text-xl lanlanlay">Support</h1>
-                <p class="text-sm text-slate-500 lanlanlay">Help Center</p>
-                <p class="text-sm text-slate-500 lanlanlay">Partners</p>
-                <p class="text-sm text-slate-500 lanlanlay">Advisory</p>
-                <p class="text-sm text-slate-500 lanlanlay">Enterprise Guide</p>
+                <p class="text-sm text-slate-500">Help Center</p>
+                <p class="text-sm text-slate-500">Partners</p>
+                <p class="text-sm text-slate-500">Advisory</p>
+                <p class="text-sm text-slate-500">Enterprise Guide</p>
             </div>
         </div>
 
@@ -2522,12 +2648,9 @@
 </script>
     
 <!--================================================== Swiper Js================================================================ -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.0.5/swiper-bundle.min.js" integrity="sha512-cEcJcdNCHLm3YSMAwsI/NeHFqfgNQvO0C27zkPuYZbYjhKlS9+kqO5hZ9YltQ4GaTDpePDQ2SrEk8gHUVaqxig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"
-        integrity="sha512-wdUM0BxMyMC/Yem1RWDiIiXA6ssXMoxypihVEwxDc+ftznGeRu4s9Fmxl8PthpxOh5CQ0eqjqw1Q8ScgNA1moQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-</script>
 
 <script src="/js/main.js"></script>
 
@@ -2576,16 +2699,12 @@ var waypoint = new Waypoint({
   // ================================================================Scrool reveal==========================================================//
 
 ScrollReveal().reveal('.lanlanlay',{ 
-    delay: 500,
+    delay: 400,
     origin: 'left',
     distance: '15px',
-    interval: 100,
+    interval: 200,
     scale:  1,
-    rotate: {
-        x: 2,
-        y: 2,
-        z: 2,
-    },
+
     reset: true,
  });
 </script>
