@@ -223,9 +223,72 @@ function languageIconActive() {
 
     autoplay: {
         delay: 5000,
-      },
+    },
 });
+const swiper1 = new Swiper('.mySwiper2', {
+    slidesPerView: 1,
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
 
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
+
+    autoplay: {
+        delay: 5000,
+    },
+});
   
+
+
+// ===========================================================//
+
+ScrollReveal().reveal('.scaleUp', {
+    duration: 1500,
+    scale: 0.9,
+    delay: 300,
+    interval: 300,
+
+});
+ScrollReveal().reveal('.fromTop', {
+    duration: 1000,
+    origin: 'top',
+    distance: '20px',
+    interval: 300,
+    delay: 300,
+
+});
+ScrollReveal().reveal('.fromBottom', {
+    duration: 1000,
+    origin: 'bottom',
+    distance: '20px',
+    interval: 300,
+    delay: 300,
+
+});
+ScrollReveal().reveal('.fromLeft', {
+    duration: 1500,
+    origin: 'left',
+    distance: '10px',
+    interval: 300,
+    delay: 300,
+
+});
+ScrollReveal().reveal('.fromRight', {
+    duration: 1500,
+    origin: 'right',
+    distance: '10px',
+    interval: 500,
+    delay: 300,
+
+});
 
 
