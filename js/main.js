@@ -202,6 +202,30 @@ function languageIconActive() {
 }
 
 //========== Initialize Swiper ===============>
+ // swiper js
+ const swiper = new Swiper('.swiper', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
+
+    autoplay: {
+        delay: 5000,
+      },
+});
+
   
-    var swiper = new Swiper(".mySwiper", {});
+
 
